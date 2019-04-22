@@ -205,13 +205,10 @@ NSMutableArray *serviceArr;
             if([part1 isEqualToString:@"LOCATION"]){
                 NSRange searchResult = [part2 rangeOfString:@"/description.xml?id="];
                 if (searchResult.location != NSNotFound) {
-<<<<<<< HEAD
                     NSInteger len = @"/description.xml?id=".length;
                     NSRange range  = NSMakeRange(searchResult.location + len, part2.length - searchResult.location - len);
                     NSString *id = [part2 substringWithRange:range];
-=======
-                    NSString *id = [part2 substring:searchResult.location];
->>>>>>> 537d62b99f0b8359961cdf2f51c8136f04821739
+
                     return id;
                 }
             }
