@@ -119,7 +119,7 @@ NSMutableArray *serviceArr;
 
                                 NSString * id = [self getDeviceId:msg];
  
-                                if (fastSearchId != nil && [id isEqualToString:fastSearchId]){
+                                if ([fastSearchId length] != 0 && [id isEqualToString:fastSearchId]){
                                     NSLog(@"fast search success");
                                     break;
                                 }
